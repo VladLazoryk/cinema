@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="discription" content="Киномонстр - это портал о кино">
+    <meta name="keywords" content="фильмы, фильмы онлайн, hd">
+        <!-- Custom styles -->
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container">
+     <div id="logo">
+         <a  href="/">
+        Кино<span>сайт</span>
+             </a>
+            </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+       <div class="wrapper">
+        <div class="wrapper-content">
+            {% include 'index.html' %}
+
+            {% block content %}
+            {% endblock %}
+
+
+        </div>
+
+<!-- Footer -->
+
+<footer class="page-footer font-small blue">
+
+  <div class="bok">
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    Все права защищены
+      <p>Всех любителей кинофильмов и сериалов приветствуем на нашем кинопортале. У нас Вы можете смотреть фильмы онлайн бесплатно в хорошем качестве.
+
+                Если у Вас есть устройство на базе Андроид или планшет Айпэд, добавляйте сайт в закладки и наслаждайтесь просмотром сериалов и фильмов в хорошем качестве!
+            </p>
+  </div>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
+
+
+

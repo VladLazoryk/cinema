@@ -1,0 +1,98 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block content %}
+  <div id="fullstory">
+
+                        <div class="leftfull trans">
+                            {% for image_item in product.productimage_set.all %}
+                    <div class="product-image-item">
+                        <img src="{{ image_item.image.url }}" class="img-responsive">
+                    </div>
+                {% endfor %}
+                            <div class="rating-full">
+                                <div class="rating-info">
+                                    <div class="fa fa-info-circle">
+
+                                    </div>
+                                </div>
+    <div class="mright fx-1">
+
+     <div class="short-info"><span>Время:</span> {{ product.time }}</a></div>
+                                <div class="short-info"><span>Страна:</span> {{ product.country }}</div>
+                                <div class="short-info"><span>Жанр:</span> {{ product.genre }}</div>
+                                <div class="short-info"><span>Премьера:</span> {{ product.premiere }}</div>
+                                <div class="short-info"><span>Бюджет:</span> -</div>
+                                <div class="short-info mt"><span>Режиссер:</span> <a href="http://kinoxa.co/directors/13931-pavel-sidorov.html">{{ product.director }}</a></div>
+                                <div class="textfull" itemprop="description" style="">
+                                 <i class="fa fa-hand-peace trans"></i>  {{ product.description }}  </div>
+                            </div>
+                        </div>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="container">
+        <div class="row">
+            <div class="col-lg-18">
+
+                <h1 class="text-center">
+                    {{ product.name }}
+                </h1>
+                {% for image_item in product.productimage_set.all %}
+                    <div class="product-image-item">
+
+                        <img src="{{ image_item.image.url }}" class="img-responsive">
+
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="'content">
+            <div class="col-lg-6 ">
+
+                <div class="">
+
+                </div>
+                <div>
+                      <!-- Nav tabs -->
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+
+                                Про фильм
+
+                        </li>
+
+
+                      </ul>
+
+                      <!-- Tab panes -->
+                      <div class="tab-content product-description-tabs">
+                        <div role="tabpanel" class="tab-pane active" id="description">
+                            {{ product.description }}
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane" id="messages">...</div>
+                        <div role="tabpanel" class="tab-pane" id="settings">...</div>
+                      </div>
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
